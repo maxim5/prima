@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "io.spbx"
-version = "0.1.0"
+version = "0.1.1"
 
 tasks.wrapper {
     gradleVersion = "8.10"
@@ -53,7 +53,6 @@ dependencies {
     testFixturesImplementation("com.carrotsearch:hppc:0.10.0")
     // testFixturesImplementation(testFixtures("com.github.maxim5:java-basics:0.1.2"))  // jitpack.io bug
     testFixturesImplementation("com.github.maxim5:java-basics:0.1.2:test-fixtures")
-
 }
 
 dependencies {
@@ -72,6 +71,15 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+tasks.withType<Jar> {
+    from(main.output)
+    from(gen.output)
+    // See also
+    // https://stackoverflow.com/questions/59401271/how-to-exclude-resources-from-the-jar-in-gradle-and-also-run-via-intellij
+    exclude("**/templates**")
+    manifest {}
 }
 
 publishing {
