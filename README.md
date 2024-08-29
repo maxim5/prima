@@ -12,5 +12,5 @@ dependencies {
 }
 ```
 
-[![JitPack workflow](https://jitpack.io/v/maxim5/prima.svg)](https://jitpack.io/#maxim5/java-basics)
+[![JitPack workflow](https://jitpack.io/v/maxim5/prima.svg)](https://jitpack.io/#maxim5/prima)
 ![Gradle workflow](https://github.com/maxim5/prima/actions/workflows/gradle.yml/badge.svg)
