@@ -8,7 +8,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.maxim5:prima:0.1.1")
+    implementation("com.github.maxim5:prima:0.1.2")
 }
 ```
 
