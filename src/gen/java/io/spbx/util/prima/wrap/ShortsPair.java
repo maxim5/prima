@@ -1,5 +1,11 @@
 package io.spbx.util.prima.wrap;
 
+import io.spbx.util.prima.func.BiShortConsumer;
+import io.spbx.util.prima.func.BiShortFunction;
+import io.spbx.util.prima.func.BiShortPredicate;
+import io.spbx.util.prima.func.ShortBinaryOperator;
+import io.spbx.util.prima.func.ShortPredicate;
+import io.spbx.util.prima.func.ShortUnaryOperator;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.processing.Generated;
@@ -8,9 +14,9 @@ import java.util.List;
 import java.util.stream.Stream;
 
 /**
- * A simple mutable wrapper around <code>short</code>.
+ * A simple immutable pair of two <code>short</code> values.
  */
-@Generated(value = "$Type$sPair.java", date = "2024-08-25T16:01:42.024051900Z")
+@Generated(value = "$Type$sPair.java", date = "2024-09-02T09:14:55.693343900Z")
 public record ShortsPair(short first, short second) {
     public static @NotNull ShortsPair of(short first, short second) {
         return new ShortsPair(first, second);
@@ -31,6 +37,50 @@ public record ShortsPair(short first, short second) {
 
     public @NotNull ShortsPair swap() {
         return ShortsPair.of(second, first);
+    }
+
+    public @NotNull ShortsPair map(@NotNull ShortUnaryOperator convertFirst, @NotNull ShortUnaryOperator convertSecond) {
+        return ShortsPair.of(convertFirst.applyToShort(first), convertSecond.applyToShort(second));
+    }
+
+    public @NotNull ShortsPair mapFirst(@NotNull ShortUnaryOperator convert) {
+        return this.map(convert, second -> second);
+    }
+
+    public @NotNull ShortsPair mapFirst(@NotNull ShortBinaryOperator convert) {
+        return ShortsPair.of(convert.applyToShort(first, second), second);
+    }
+
+    public @NotNull ShortsPair mapSecond(@NotNull ShortUnaryOperator convert) {
+        return this.map(first -> first, convert);
+    }
+
+    public @NotNull ShortsPair mapSecond(@NotNull ShortBinaryOperator convert) {
+        return ShortsPair.of(first, convert.applyToShort(first, second));
+    }
+
+    public <T> @NotNull T mapToObj(@NotNull BiShortFunction<T> convert) {
+        return convert.apply(first, second);
+    }
+
+    public short mapToShort(@NotNull ShortBinaryOperator convert) {
+        return convert.applyToShort(first, second);
+    }
+
+    public boolean testFirst(@NotNull ShortPredicate predicate) {
+        return predicate.test(first);
+    }
+
+    public boolean testSecond(@NotNull ShortPredicate predicate) {
+        return predicate.test(second);
+    }
+
+    public boolean test(@NotNull BiShortPredicate predicate) {
+        return predicate.test(first, second);
+    }
+
+    public void apply(@NotNull BiShortConsumer action) {
+        action.accept(first, second);
     }
 
     public @NotNull Stream<Short> stream() {

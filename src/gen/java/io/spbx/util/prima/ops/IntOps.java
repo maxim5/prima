@@ -4,17 +4,40 @@ import javax.annotation.processing.Generated;
 import java.util.Arrays;
 import java.util.function.IntBinaryOperator;
 import java.util.function.IntPredicate;
+import io.spbx.util.prima.func.IntUnaryOperator;
 
 /**
  * Utility operations for <code>int</code>s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-08-25T16:01:41.995046300Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-02T09:14:55.681341200Z")
 public class IntOps {
     public static final IntBinaryOperator INT_ADD = Integer::sum;
     public static final IntBinaryOperator INT_MUL = (a, b) -> a * b;
     public static final IntBinaryOperator INT_AND = (a, b) -> a & b;
     public static final IntBinaryOperator INT_OR  = (a, b) -> a | b;
     public static final IntBinaryOperator INT_XOR = (a, b) -> a ^ b;
+    public static final IntUnaryOperator  INT_NEG = a -> -a;
+    public static final IntUnaryOperator  INT_NOT = a -> ~a;
+    public static final IntUnaryOperator INT_TO_ASCII_LOWER = IntOps::toAsciiLowerCase;
+    public static final IntUnaryOperator INT_TO_ASCII_UPPER = IntOps::toAsciiUpperCase;
+    public static final IntPredicate INT_IS_ASCII_LOWER_LETTER = IntOps::isAsciiLowerCase;
+    public static final IntPredicate INT_IS_ASCII_UPPER_LETTER = IntOps::isAsciiUpperCase;
+
+    public static boolean isAsciiLowerCase(int val) {
+        return 'a' <= val && val <= 'z';
+    }
+
+    public static boolean isAsciiUpperCase(int val) {
+        return 'A' <= val && val <= 'Z';
+    }
+
+    public static int toAsciiLowerCase(int val) {
+        return isAsciiUpperCase(val) ? (int) (val + 32) : val;  // 32 = 'a' - 'A'
+    }
+
+    public static int toAsciiUpperCase(int val) {
+        return isAsciiLowerCase(val) ? (int) (val - 32) : val;  // 32 = 'a' - 'A'
+    }
 
     /* Range array */
 

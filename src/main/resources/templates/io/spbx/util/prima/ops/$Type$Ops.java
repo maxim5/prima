@@ -10,6 +10,7 @@ import java.util.function.$Type$Predicate;
 import io.spbx.util.prima.func.$Type$Predicate;
 import io.spbx.util.prima.func.$Type$BinaryOperator;
 /*= end =*/
+import io.spbx.util.prima.func.$Type$UnaryOperator;
 
 /**
  * Utility operations for <code>$type$</code>s.
@@ -33,6 +34,41 @@ public class $Type$Ops {
     public static final $Type$BinaryOperator $TYPE$_AND = (a, b) -> ($type$) (a & b);
     public static final $Type$BinaryOperator $TYPE$_OR  = (a, b) -> ($type$) (a | b);
     public static final $Type$BinaryOperator $TYPE$_XOR = (a, b) -> ($type$) (a ^ b);
+    /*= end =*/
+    /*= if ($type$ == int) || ($type$ == long) =*/
+    public static final $Type$UnaryOperator  $TYPE$_NEG = a -> -a;
+    public static final $Type$UnaryOperator  $TYPE$_NOT = a -> ~a;
+    /*= end =*/
+    /*= if ($type$ == byte) || ($type$ == short) =*/
+    public static final $Type$UnaryOperator  $TYPE$_NEG = a -> ($type$) -a;
+    public static final $Type$UnaryOperator  $TYPE$_NOT = a -> ($type$) ~a;
+    /*= end =*/
+
+    /*= if ($type$ == char) =*/
+    public static final $Type$UnaryOperator $TYPE$_TO_LOWER = $TypeWrap$::toLowerCase;
+    public static final $Type$UnaryOperator $TYPE$_TO_UPPER = $TypeWrap$::toUpperCase;
+    /*= end =*/
+    /*= if ($type$ == char) || ($type$ == byte) || ($type$ == int) =*/
+    public static final $Type$UnaryOperator $TYPE$_TO_ASCII_LOWER = $Type$Ops::toAsciiLowerCase;
+    public static final $Type$UnaryOperator $TYPE$_TO_ASCII_UPPER = $Type$Ops::toAsciiUpperCase;
+    public static final $Type$Predicate $TYPE$_IS_ASCII_LOWER_LETTER = $Type$Ops::isAsciiLowerCase;
+    public static final $Type$Predicate $TYPE$_IS_ASCII_UPPER_LETTER = $Type$Ops::isAsciiUpperCase;
+
+    public static boolean isAsciiLowerCase($type$ val) {
+        return 'a' <= val && val <= 'z';
+    }
+
+    public static boolean isAsciiUpperCase($type$ val) {
+        return 'A' <= val && val <= 'Z';
+    }
+
+    public static $type$ toAsciiLowerCase($type$ val) {
+        return isAsciiUpperCase(val) ? ($type$) (val + 32) : val;  // 32 = 'a' - 'A'
+    }
+
+    public static $type$ toAsciiUpperCase($type$ val) {
+        return isAsciiLowerCase(val) ? ($type$) (val - 32) : val;  // 32 = 'a' - 'A'
+    }
     /*= end =*/
 
     /* Range array */

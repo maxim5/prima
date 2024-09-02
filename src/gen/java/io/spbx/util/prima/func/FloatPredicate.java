@@ -8,7 +8,7 @@ import java.util.function.Predicate;
  * A simple predicate for the primitive <code>float</code> values.
  */
 @FunctionalInterface
-@Generated(value = "$Type$Predicate.java", date = "2024-08-25T16:01:41.963038800Z")
+@Generated(value = "$Type$Predicate.java", date = "2024-09-02T09:14:55.640331900Z")
 public interface FloatPredicate extends
         Predicate<Float>,
         Function<Float, Boolean> {

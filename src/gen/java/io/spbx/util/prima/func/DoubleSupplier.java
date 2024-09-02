@@ -7,7 +7,7 @@ import java.util.function.Supplier;
  * Represents a supplier of {@code double}-valued results.
  */
 @FunctionalInterface
-@Generated(value = "$Type$Supplier.java", date = "2024-08-25T16:01:41.971040200Z")
+@Generated(value = "$Type$Supplier.java", date = "2024-09-02T09:14:55.645332200Z")
 public interface DoubleSupplier extends
     java.util.function.DoubleSupplier,
     Supplier<Double> {

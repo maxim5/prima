@@ -4,14 +4,16 @@ import javax.annotation.processing.Generated;
 import java.util.function.Consumer;
 
 /**
- * Represents a supplier of {@code char}-valued results.
+ * Represents an operation that accepts a single {@code char} argument and returns no
+ * result. Unlike most other functional interfaces, {@code CharConsumer} is expected
+ * to operate via side-effects.
  */
 @FunctionalInterface
-@Generated(value = "$Type$Consumer.java", date = "2024-08-25T16:01:41.950035300Z")
+@Generated(value = "$Type$Consumer.java", date = "2024-09-02T09:14:55.632328700Z")
 public interface CharConsumer extends
     Consumer<Character> {
     /**
-     * Returns the {@code char} result.
+     * Performs this operation on the {@code char} argument.
      */
     void accept(char value);
 

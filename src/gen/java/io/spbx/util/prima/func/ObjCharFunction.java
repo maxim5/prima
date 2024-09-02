@@ -12,22 +12,22 @@ import java.util.function.BiFunction;
  *
  * @see java.util.function.Function
  * @see java.util.function.BiFunction
- * @see CharacterFunction
+ * @see CharFunction
  */
 @FunctionalInterface
-@Generated(value = "Obj$Type$Function.java", date = "2024-08-25T16:01:41.985043800Z")
+@Generated(value = "Obj$Type$Function.java", date = "2024-09-02T09:14:55.670338700Z")
 public interface ObjCharFunction<T, R> extends BiFunction<T, Character, R> {
     /**
      * Applies this function to the given arguments.
      *
-     * @param t the first function argument
-     * @param value the second function argument
+     * @param left the first function argument
+     * @param right the second function argument
      * @return the function result
      */
-    R apply(T t, char value);
+    R apply(T left, char right);
 
     @Override
-    default R apply(T t, Character value) {
-        return apply(t, (char) value);
+    default R apply(T left, Character right) {
+        return apply(left, (char) right);
     }
 }

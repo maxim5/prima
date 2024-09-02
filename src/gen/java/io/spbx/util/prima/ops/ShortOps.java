@@ -4,17 +4,20 @@ import javax.annotation.processing.Generated;
 import java.util.Arrays;
 import io.spbx.util.prima.func.ShortPredicate;
 import io.spbx.util.prima.func.ShortBinaryOperator;
+import io.spbx.util.prima.func.ShortUnaryOperator;
 
 /**
  * Utility operations for <code>short</code>s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-08-25T16:01:41.995046300Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-02T09:14:55.681341200Z")
 public class ShortOps {
     public static final ShortBinaryOperator SHORT_ADD = (a, b) -> (short) (a + b);
     public static final ShortBinaryOperator SHORT_MUL = (a, b) -> (short) (a * b);
     public static final ShortBinaryOperator SHORT_AND = (a, b) -> (short) (a & b);
     public static final ShortBinaryOperator SHORT_OR  = (a, b) -> (short) (a | b);
     public static final ShortBinaryOperator SHORT_XOR = (a, b) -> (short) (a ^ b);
+    public static final ShortUnaryOperator  SHORT_NEG = a -> (short) -a;
+    public static final ShortUnaryOperator  SHORT_NOT = a -> (short) ~a;
 
     /* Range array */
 

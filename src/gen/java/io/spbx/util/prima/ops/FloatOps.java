@@ -4,11 +4,12 @@ import javax.annotation.processing.Generated;
 import java.util.Arrays;
 import io.spbx.util.prima.func.FloatPredicate;
 import io.spbx.util.prima.func.FloatBinaryOperator;
+import io.spbx.util.prima.func.FloatUnaryOperator;
 
 /**
  * Utility operations for <code>float</code>s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-08-25T16:01:41.995046300Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-02T09:14:55.681341200Z")
 public class FloatOps {
     public static final FloatBinaryOperator FLOAT_ADD = Float::sum;
     public static final FloatBinaryOperator FLOAT_MUL = (a, b) -> a * b;

@@ -12,7 +12,7 @@ import java.util.function.BiFunction;
  *
  * @see java.util.function.Function
  * @see java.util.function.BiFunction
- * @see $TypeWrap$Function
+ * @see $Type$Function
  */
 @FunctionalInterface
 @Generated(value = "$source_template$", date = "$now$")
@@ -20,14 +20,14 @@ public interface Obj$Type$Function<T, R> extends BiFunction<T, $TypeWrap$, R> {
     /**
      * Applies this function to the given arguments.
      *
-     * @param t the first function argument
-     * @param value the second function argument
+     * @param left the first function argument
+     * @param right the second function argument
      * @return the function result
      */
-    R apply(T t, $type$ value);
+    R apply(T left, $type$ right);
 
     @Override
-    default R apply(T t, $TypeWrap$ value) {
-        return apply(t, ($type$) value);
+    default R apply(T left, $TypeWrap$ right) {
+        return apply(left, ($type$) right);
     }
 }

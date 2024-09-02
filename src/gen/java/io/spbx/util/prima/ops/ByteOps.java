@@ -4,17 +4,40 @@ import javax.annotation.processing.Generated;
 import java.util.Arrays;
 import io.spbx.util.prima.func.BytePredicate;
 import io.spbx.util.prima.func.ByteBinaryOperator;
+import io.spbx.util.prima.func.ByteUnaryOperator;
 
 /**
  * Utility operations for <code>byte</code>s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-08-25T16:01:41.995046300Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-02T09:14:55.681341200Z")
 public class ByteOps {
     public static final ByteBinaryOperator BYTE_ADD = (a, b) -> (byte) (a + b);
     public static final ByteBinaryOperator BYTE_MUL = (a, b) -> (byte) (a * b);
     public static final ByteBinaryOperator BYTE_AND = (a, b) -> (byte) (a & b);
     public static final ByteBinaryOperator BYTE_OR  = (a, b) -> (byte) (a | b);
     public static final ByteBinaryOperator BYTE_XOR = (a, b) -> (byte) (a ^ b);
+    public static final ByteUnaryOperator  BYTE_NEG = a -> (byte) -a;
+    public static final ByteUnaryOperator  BYTE_NOT = a -> (byte) ~a;
+    public static final ByteUnaryOperator BYTE_TO_ASCII_LOWER = ByteOps::toAsciiLowerCase;
+    public static final ByteUnaryOperator BYTE_TO_ASCII_UPPER = ByteOps::toAsciiUpperCase;
+    public static final BytePredicate BYTE_IS_ASCII_LOWER_LETTER = ByteOps::isAsciiLowerCase;
+    public static final BytePredicate BYTE_IS_ASCII_UPPER_LETTER = ByteOps::isAsciiUpperCase;
+
+    public static boolean isAsciiLowerCase(byte val) {
+        return 'a' <= val && val <= 'z';
+    }
+
+    public static boolean isAsciiUpperCase(byte val) {
+        return 'A' <= val && val <= 'Z';
+    }
+
+    public static byte toAsciiLowerCase(byte val) {
+        return isAsciiUpperCase(val) ? (byte) (val + 32) : val;  // 32 = 'a' - 'A'
+    }
+
+    public static byte toAsciiUpperCase(byte val) {
+        return isAsciiLowerCase(val) ? (byte) (val - 32) : val;  // 32 = 'a' - 'A'
+    }
 
     /* Range array */
 

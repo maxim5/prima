@@ -1,5 +1,11 @@
 package io.spbx.util.prima.wrap;
 
+import io.spbx.util.prima.func.BiLongConsumer;
+import io.spbx.util.prima.func.BiLongFunction;
+import io.spbx.util.prima.func.BiLongPredicate;
+import io.spbx.util.prima.func.LongBinaryOperator;
+import io.spbx.util.prima.func.LongPredicate;
+import io.spbx.util.prima.func.LongUnaryOperator;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.processing.Generated;
@@ -8,9 +14,9 @@ import java.util.List;
 import java.util.stream.Stream;
 
 /**
- * A simple mutable wrapper around <code>long</code>.
+ * A simple immutable pair of two <code>long</code> values.
  */
-@Generated(value = "$Type$sPair.java", date = "2024-08-25T16:01:42.024051900Z")
+@Generated(value = "$Type$sPair.java", date = "2024-09-02T09:14:55.693343900Z")
 public record LongsPair(long first, long second) {
     public static @NotNull LongsPair of(long first, long second) {
         return new LongsPair(first, second);
@@ -31,6 +37,50 @@ public record LongsPair(long first, long second) {
 
     public @NotNull LongsPair swap() {
         return LongsPair.of(second, first);
+    }
+
+    public @NotNull LongsPair map(@NotNull LongUnaryOperator convertFirst, @NotNull LongUnaryOperator convertSecond) {
+        return LongsPair.of(convertFirst.applyToLong(first), convertSecond.applyToLong(second));
+    }
+
+    public @NotNull LongsPair mapFirst(@NotNull LongUnaryOperator convert) {
+        return this.map(convert, second -> second);
+    }
+
+    public @NotNull LongsPair mapFirst(@NotNull LongBinaryOperator convert) {
+        return LongsPair.of(convert.applyToLong(first, second), second);
+    }
+
+    public @NotNull LongsPair mapSecond(@NotNull LongUnaryOperator convert) {
+        return this.map(first -> first, convert);
+    }
+
+    public @NotNull LongsPair mapSecond(@NotNull LongBinaryOperator convert) {
+        return LongsPair.of(first, convert.applyToLong(first, second));
+    }
+
+    public <T> @NotNull T mapToObj(@NotNull BiLongFunction<T> convert) {
+        return convert.apply(first, second);
+    }
+
+    public long mapToLong(@NotNull LongBinaryOperator convert) {
+        return convert.applyToLong(first, second);
+    }
+
+    public boolean testFirst(@NotNull LongPredicate predicate) {
+        return predicate.test(first);
+    }
+
+    public boolean testSecond(@NotNull LongPredicate predicate) {
+        return predicate.test(second);
+    }
+
+    public boolean test(@NotNull BiLongPredicate predicate) {
+        return predicate.test(first, second);
+    }
+
+    public void apply(@NotNull BiLongConsumer action) {
+        action.accept(first, second);
     }
 
     public @NotNull Stream<Long> stream() {

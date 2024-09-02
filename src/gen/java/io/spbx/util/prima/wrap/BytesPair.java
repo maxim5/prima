@@ -1,5 +1,11 @@
 package io.spbx.util.prima.wrap;
 
+import io.spbx.util.prima.func.BiByteConsumer;
+import io.spbx.util.prima.func.BiByteFunction;
+import io.spbx.util.prima.func.BiBytePredicate;
+import io.spbx.util.prima.func.ByteBinaryOperator;
+import io.spbx.util.prima.func.BytePredicate;
+import io.spbx.util.prima.func.ByteUnaryOperator;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.processing.Generated;
@@ -8,9 +14,9 @@ import java.util.List;
 import java.util.stream.Stream;
 
 /**
- * A simple mutable wrapper around <code>byte</code>.
+ * A simple immutable pair of two <code>byte</code> values.
  */
-@Generated(value = "$Type$sPair.java", date = "2024-08-25T16:01:42.024051900Z")
+@Generated(value = "$Type$sPair.java", date = "2024-09-02T09:14:55.693343900Z")
 public record BytesPair(byte first, byte second) {
     public static @NotNull BytesPair of(byte first, byte second) {
         return new BytesPair(first, second);
@@ -31,6 +37,50 @@ public record BytesPair(byte first, byte second) {
 
     public @NotNull BytesPair swap() {
         return BytesPair.of(second, first);
+    }
+
+    public @NotNull BytesPair map(@NotNull ByteUnaryOperator convertFirst, @NotNull ByteUnaryOperator convertSecond) {
+        return BytesPair.of(convertFirst.applyToByte(first), convertSecond.applyToByte(second));
+    }
+
+    public @NotNull BytesPair mapFirst(@NotNull ByteUnaryOperator convert) {
+        return this.map(convert, second -> second);
+    }
+
+    public @NotNull BytesPair mapFirst(@NotNull ByteBinaryOperator convert) {
+        return BytesPair.of(convert.applyToByte(first, second), second);
+    }
+
+    public @NotNull BytesPair mapSecond(@NotNull ByteUnaryOperator convert) {
+        return this.map(first -> first, convert);
+    }
+
+    public @NotNull BytesPair mapSecond(@NotNull ByteBinaryOperator convert) {
+        return BytesPair.of(first, convert.applyToByte(first, second));
+    }
+
+    public <T> @NotNull T mapToObj(@NotNull BiByteFunction<T> convert) {
+        return convert.apply(first, second);
+    }
+
+    public byte mapToByte(@NotNull ByteBinaryOperator convert) {
+        return convert.applyToByte(first, second);
+    }
+
+    public boolean testFirst(@NotNull BytePredicate predicate) {
+        return predicate.test(first);
+    }
+
+    public boolean testSecond(@NotNull BytePredicate predicate) {
+        return predicate.test(second);
+    }
+
+    public boolean test(@NotNull BiBytePredicate predicate) {
+        return predicate.test(first, second);
+    }
+
+    public void apply(@NotNull BiByteConsumer action) {
+        action.accept(first, second);
     }
 
     public @NotNull Stream<Byte> stream() {

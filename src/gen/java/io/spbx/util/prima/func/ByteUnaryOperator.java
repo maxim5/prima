@@ -8,7 +8,7 @@ import java.util.function.UnaryOperator;
  * an <code>byte</code>-valued result.
  */
 @FunctionalInterface
-@Generated(value = "$Type$UnaryOperator.java", date = "2024-08-25T16:01:41.978042300Z")
+@Generated(value = "$Type$UnaryOperator.java", date = "2024-09-02T09:14:55.650333600Z")
 public interface ByteUnaryOperator extends
         UnaryOperator<Byte>, ByteFunction<Byte>, ToByteFunction<Byte> {
     /**

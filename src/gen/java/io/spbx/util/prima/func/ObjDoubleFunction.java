@@ -15,19 +15,19 @@ import java.util.function.BiFunction;
  * @see DoubleFunction
  */
 @FunctionalInterface
-@Generated(value = "Obj$Type$Function.java", date = "2024-08-25T16:01:41.985043800Z")
+@Generated(value = "Obj$Type$Function.java", date = "2024-09-02T09:14:55.670338700Z")
 public interface ObjDoubleFunction<T, R> extends BiFunction<T, Double, R> {
     /**
      * Applies this function to the given arguments.
      *
-     * @param t the first function argument
-     * @param value the second function argument
+     * @param left the first function argument
+     * @param right the second function argument
      * @return the function result
      */
-    R apply(T t, double value);
+    R apply(T left, double right);
 
     @Override
-    default R apply(T t, Double value) {
-        return apply(t, (double) value);
+    default R apply(T left, Double right) {
+        return apply(left, (double) right);
     }
 }

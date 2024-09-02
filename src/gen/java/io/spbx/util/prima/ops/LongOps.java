@@ -4,17 +4,20 @@ import javax.annotation.processing.Generated;
 import java.util.Arrays;
 import java.util.function.LongBinaryOperator;
 import java.util.function.LongPredicate;
+import io.spbx.util.prima.func.LongUnaryOperator;
 
 /**
  * Utility operations for <code>long</code>s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-08-25T16:01:41.995046300Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-02T09:14:55.681341200Z")
 public class LongOps {
     public static final LongBinaryOperator LONG_ADD = Long::sum;
     public static final LongBinaryOperator LONG_MUL = (a, b) -> a * b;
     public static final LongBinaryOperator LONG_AND = (a, b) -> a & b;
     public static final LongBinaryOperator LONG_OR  = (a, b) -> a | b;
     public static final LongBinaryOperator LONG_XOR = (a, b) -> a ^ b;
+    public static final LongUnaryOperator  LONG_NEG = a -> -a;
+    public static final LongUnaryOperator  LONG_NOT = a -> ~a;
 
     /* Range array */
 

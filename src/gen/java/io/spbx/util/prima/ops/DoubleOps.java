@@ -4,11 +4,12 @@ import javax.annotation.processing.Generated;
 import java.util.Arrays;
 import java.util.function.DoubleBinaryOperator;
 import java.util.function.DoublePredicate;
+import io.spbx.util.prima.func.DoubleUnaryOperator;
 
 /**
  * Utility operations for <code>double</code>s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-08-25T16:01:41.995046300Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-02T09:14:55.681341200Z")
 public class DoubleOps {
     public static final DoubleBinaryOperator DOUBLE_ADD = Double::sum;
     public static final DoubleBinaryOperator DOUBLE_MUL = (a, b) -> a * b;

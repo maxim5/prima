@@ -1,5 +1,11 @@
 package io.spbx.util.prima.wrap;
 
+import io.spbx.util.prima.func.BiCharConsumer;
+import io.spbx.util.prima.func.BiCharFunction;
+import io.spbx.util.prima.func.BiCharPredicate;
+import io.spbx.util.prima.func.CharBinaryOperator;
+import io.spbx.util.prima.func.CharPredicate;
+import io.spbx.util.prima.func.CharUnaryOperator;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.processing.Generated;
@@ -8,9 +14,9 @@ import java.util.List;
 import java.util.stream.Stream;
 
 /**
- * A simple mutable wrapper around <code>char</code>.
+ * A simple immutable pair of two <code>char</code> values.
  */
-@Generated(value = "$Type$sPair.java", date = "2024-08-25T16:01:42.024051900Z")
+@Generated(value = "$Type$sPair.java", date = "2024-09-02T09:14:55.693343900Z")
 public record CharsPair(char first, char second) {
     public static @NotNull CharsPair of(char first, char second) {
         return new CharsPair(first, second);
@@ -31,6 +37,50 @@ public record CharsPair(char first, char second) {
 
     public @NotNull CharsPair swap() {
         return CharsPair.of(second, first);
+    }
+
+    public @NotNull CharsPair map(@NotNull CharUnaryOperator convertFirst, @NotNull CharUnaryOperator convertSecond) {
+        return CharsPair.of(convertFirst.applyToChar(first), convertSecond.applyToChar(second));
+    }
+
+    public @NotNull CharsPair mapFirst(@NotNull CharUnaryOperator convert) {
+        return this.map(convert, second -> second);
+    }
+
+    public @NotNull CharsPair mapFirst(@NotNull CharBinaryOperator convert) {
+        return CharsPair.of(convert.applyToChar(first, second), second);
+    }
+
+    public @NotNull CharsPair mapSecond(@NotNull CharUnaryOperator convert) {
+        return this.map(first -> first, convert);
+    }
+
+    public @NotNull CharsPair mapSecond(@NotNull CharBinaryOperator convert) {
+        return CharsPair.of(first, convert.applyToChar(first, second));
+    }
+
+    public <T> @NotNull T mapToObj(@NotNull BiCharFunction<T> convert) {
+        return convert.apply(first, second);
+    }
+
+    public char mapToChar(@NotNull CharBinaryOperator convert) {
+        return convert.applyToChar(first, second);
+    }
+
+    public boolean testFirst(@NotNull CharPredicate predicate) {
+        return predicate.test(first);
+    }
+
+    public boolean testSecond(@NotNull CharPredicate predicate) {
+        return predicate.test(second);
+    }
+
+    public boolean test(@NotNull BiCharPredicate predicate) {
+        return predicate.test(first, second);
+    }
+
+    public void apply(@NotNull BiCharConsumer action) {
+        action.accept(first, second);
     }
 
     public @NotNull Stream<Character> stream() {

@@ -4,12 +4,36 @@ import javax.annotation.processing.Generated;
 import java.util.Arrays;
 import io.spbx.util.prima.func.CharPredicate;
 import io.spbx.util.prima.func.CharBinaryOperator;
+import io.spbx.util.prima.func.CharUnaryOperator;
 
 /**
  * Utility operations for <code>char</code>s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-08-25T16:01:41.995046300Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-02T09:14:55.681341200Z")
 public class CharOps {
+
+    public static final CharUnaryOperator CHAR_TO_LOWER = Character::toLowerCase;
+    public static final CharUnaryOperator CHAR_TO_UPPER = Character::toUpperCase;
+    public static final CharUnaryOperator CHAR_TO_ASCII_LOWER = CharOps::toAsciiLowerCase;
+    public static final CharUnaryOperator CHAR_TO_ASCII_UPPER = CharOps::toAsciiUpperCase;
+    public static final CharPredicate CHAR_IS_ASCII_LOWER_LETTER = CharOps::isAsciiLowerCase;
+    public static final CharPredicate CHAR_IS_ASCII_UPPER_LETTER = CharOps::isAsciiUpperCase;
+
+    public static boolean isAsciiLowerCase(char val) {
+        return 'a' <= val && val <= 'z';
+    }
+
+    public static boolean isAsciiUpperCase(char val) {
+        return 'A' <= val && val <= 'Z';
+    }
+
+    public static char toAsciiLowerCase(char val) {
+        return isAsciiUpperCase(val) ? (char) (val + 32) : val;  // 32 = 'a' - 'A'
+    }
+
+    public static char toAsciiUpperCase(char val) {
+        return isAsciiLowerCase(val) ? (char) (val - 32) : val;  // 32 = 'a' - 'A'
+    }
 
     /* Range array */
 

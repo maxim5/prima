@@ -4,14 +4,16 @@ import javax.annotation.processing.Generated;
 import java.util.function.Consumer;
 
 /**
- * Represents a supplier of {@code float}-valued results.
+ * Represents an operation that accepts a single {@code float} argument and returns no
+ * result. Unlike most other functional interfaces, {@code FloatConsumer} is expected
+ * to operate via side-effects.
  */
 @FunctionalInterface
-@Generated(value = "$Type$Consumer.java", date = "2024-08-25T16:01:41.950035300Z")
+@Generated(value = "$Type$Consumer.java", date = "2024-09-02T09:14:55.632328700Z")
 public interface FloatConsumer extends
     Consumer<Float> {
     /**
-     * Returns the {@code float} result.
+     * Performs this operation on the {@code float} argument.
      */
     void accept(float value);
 

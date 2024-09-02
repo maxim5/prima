@@ -7,7 +7,7 @@ import javax.annotation.processing.Generated;
 /**
  * A simple mutable wrapper around <code>int</code>.
  */
-@Generated(value = "Mutable$Type$.java", date = "2024-08-25T16:01:42.029054Z")
+@Generated(value = "Mutable$Type$.java", date = "2024-09-02T09:14:55.697343300Z")
 public class MutableInt {
     public int value = 0;
 

@@ -4,7 +4,9 @@ import javax.annotation.processing.Generated;
 import java.util.function.Consumer;
 
 /**
- * Represents a supplier of {@code $type$}-valued results.
+ * Represents an operation that accepts a single {@code $type$} argument and returns no
+ * result. Unlike most other functional interfaces, {@code $Type$Consumer} is expected
+ * to operate via side-effects.
  */
 @FunctionalInterface
 @Generated(value = "$source_template$", date = "$now$")
@@ -14,7 +16,7 @@ public interface $Type$Consumer extends
     /*= end =*/
     Consumer<$TypeWrap$> {
     /**
-     * Returns the {@code $type$} result.
+     * Performs this operation on the {@code $type$} argument.
      */
     /*= if ($type$ == int) || ($type$ == long) || ($type$ == double) =*/
     @Override

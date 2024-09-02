@@ -4,14 +4,16 @@ import javax.annotation.processing.Generated;
 import java.util.function.Consumer;
 
 /**
- * Represents a supplier of {@code short}-valued results.
+ * Represents an operation that accepts a single {@code short} argument and returns no
+ * result. Unlike most other functional interfaces, {@code ShortConsumer} is expected
+ * to operate via side-effects.
  */
 @FunctionalInterface
-@Generated(value = "$Type$Consumer.java", date = "2024-08-25T16:01:41.950035300Z")
+@Generated(value = "$Type$Consumer.java", date = "2024-09-02T09:14:55.632328700Z")
 public interface ShortConsumer extends
     Consumer<Short> {
     /**
-     * Returns the {@code short} result.
+     * Performs this operation on the {@code short} argument.
      */
     void accept(short value);
 

@@ -1,5 +1,11 @@
 package io.spbx.util.prima.wrap;
 
+import io.spbx.util.prima.func.BiIntConsumer;
+import io.spbx.util.prima.func.BiIntFunction;
+import io.spbx.util.prima.func.BiIntPredicate;
+import io.spbx.util.prima.func.IntBinaryOperator;
+import io.spbx.util.prima.func.IntPredicate;
+import io.spbx.util.prima.func.IntUnaryOperator;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.processing.Generated;
@@ -8,9 +14,9 @@ import java.util.List;
 import java.util.stream.Stream;
 
 /**
- * A simple mutable wrapper around <code>int</code>.
+ * A simple immutable pair of two <code>int</code> values.
  */
-@Generated(value = "$Type$sPair.java", date = "2024-08-25T16:01:42.024051900Z")
+@Generated(value = "$Type$sPair.java", date = "2024-09-02T09:14:55.693343900Z")
 public record IntsPair(int first, int second) {
     public static @NotNull IntsPair of(int first, int second) {
         return new IntsPair(first, second);
@@ -31,6 +37,50 @@ public record IntsPair(int first, int second) {
 
     public @NotNull IntsPair swap() {
         return IntsPair.of(second, first);
+    }
+
+    public @NotNull IntsPair map(@NotNull IntUnaryOperator convertFirst, @NotNull IntUnaryOperator convertSecond) {
+        return IntsPair.of(convertFirst.applyToInt(first), convertSecond.applyToInt(second));
+    }
+
+    public @NotNull IntsPair mapFirst(@NotNull IntUnaryOperator convert) {
+        return this.map(convert, second -> second);
+    }
+
+    public @NotNull IntsPair mapFirst(@NotNull IntBinaryOperator convert) {
+        return IntsPair.of(convert.applyToInt(first, second), second);
+    }
+
+    public @NotNull IntsPair mapSecond(@NotNull IntUnaryOperator convert) {
+        return this.map(first -> first, convert);
+    }
+
+    public @NotNull IntsPair mapSecond(@NotNull IntBinaryOperator convert) {
+        return IntsPair.of(first, convert.applyToInt(first, second));
+    }
+
+    public <T> @NotNull T mapToObj(@NotNull BiIntFunction<T> convert) {
+        return convert.apply(first, second);
+    }
+
+    public int mapToInt(@NotNull IntBinaryOperator convert) {
+        return convert.applyToInt(first, second);
+    }
+
+    public boolean testFirst(@NotNull IntPredicate predicate) {
+        return predicate.test(first);
+    }
+
+    public boolean testSecond(@NotNull IntPredicate predicate) {
+        return predicate.test(second);
+    }
+
+    public boolean test(@NotNull BiIntPredicate predicate) {
+        return predicate.test(first, second);
+    }
+
+    public void apply(@NotNull BiIntConsumer action) {
+        action.accept(first, second);
     }
 
     public @NotNull Stream<Integer> stream() {
