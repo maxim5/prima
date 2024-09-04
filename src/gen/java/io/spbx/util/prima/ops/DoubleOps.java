@@ -9,7 +9,7 @@ import io.spbx.util.prima.func.DoubleUnaryOperator;
 /**
  * Utility operations for <code>double</code>s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-09-02T09:14:55.681341200Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-04T12:43:13.906454100Z")
 public class DoubleOps {
     public static final DoubleBinaryOperator DOUBLE_ADD = Double::sum;
     public static final DoubleBinaryOperator DOUBLE_MUL = (a, b) -> a * b;
@@ -71,6 +71,15 @@ public class DoubleOps {
         java.nio.ByteBuffer byteBuffer = java.nio.ByteBuffer.allocate(array.length * Double.BYTES);
         byteBuffer.asDoubleBuffer().put(array);
         return byteBuffer.array();
+    }
+
+    /* Java NIO buffers */
+
+    // https://stackoverflow.com/questions/679298/gets-byte-array-from-a-bytebuffer-in-java
+    private static double[] remainingDoubles(java.nio.DoubleBuffer buffer) {
+        double[] doubles = new double[buffer.remaining()];
+        buffer.get(doubles, 0, doubles.length);
+        return doubles;
     }
 
     /* Positive/non-negative number selections */

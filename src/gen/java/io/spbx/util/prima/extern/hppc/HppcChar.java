@@ -26,7 +26,7 @@ import java.util.stream.StreamSupport;
  *
  * @link <a href='https://github.com/carrotsearch/hppc'>Hppc GitHub</a>
  */
-@Generated(value = "Hppc$Type$.java", date = "2024-09-02T09:14:55.620327300Z")
+@Generated(value = "Hppc$Type$.java", date = "2024-09-04T12:43:13.829437700Z")
 public class HppcChar {
     /*
      * In case Hppc library is not in a classpath, try to fail early and produce a friendly error message.

@@ -9,7 +9,7 @@ import java.util.function.BinaryOperator;
  * {@link BinaryOperator} for <code>short</code>.
  */
 @FunctionalInterface
-@Generated(value = "$Type$BinaryOperator.java", date = "2024-09-02T09:14:55.627328100Z")
+@Generated(value = "$Type$BinaryOperator.java", date = "2024-09-04T12:43:13.838438900Z")
 public interface ShortBinaryOperator extends
         BinaryOperator<Short>,
         ObjShortFunction<Short, Short> {

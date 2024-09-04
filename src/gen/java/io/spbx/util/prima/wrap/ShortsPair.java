@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 /**
  * A simple immutable pair of two <code>short</code> values.
  */
-@Generated(value = "$Type$sPair.java", date = "2024-09-02T09:14:55.693343900Z")
+@Generated(value = "$Type$sPair.java", date = "2024-09-04T12:43:13.923459200Z")
 public record ShortsPair(short first, short second) {
     public static @NotNull ShortsPair of(short first, short second) {
         return new ShortsPair(first, second);

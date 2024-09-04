@@ -9,7 +9,7 @@ import java.util.function.BiPredicate;
  * This is the primitive type specialization of {@link BiPredicate} for <code>short</code>.
  */
 @FunctionalInterface
-@Generated(value = "Bi$Type$Predicate.java", date = "2024-09-02T09:14:55.662336900Z")
+@Generated(value = "Bi$Type$Predicate.java", date = "2024-09-04T12:43:13.884449900Z")
 public interface BiShortPredicate extends BiPredicate<Short, Short>, ObjShortFunction<Short, Boolean>, BiShortFunction<Boolean> {
     /**
      * Evaluates this predicate on the {@code short} arguments.

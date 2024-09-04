@@ -56,4 +56,11 @@ public class CharOpsTest {
         assertThat(CharOps.isAsciiUpperCase('0')).isFalse();
         assertThat(CharOps.isAsciiUpperCase(' ')).isFalse();
     }
+
+    @Test
+    public void range_simple() {
+        assertThat(CharOps.range('a', 'a')).asList().isEmpty();
+        assertThat(CharOps.range('a', 'b')).asList().containsExactly('a');
+        assertThat(CharOps.range('a', 'f')).asList().containsExactly('a', 'b', 'c', 'd', 'e');
+    }
 }

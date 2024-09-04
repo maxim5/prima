@@ -16,7 +16,7 @@ import javax.annotation.processing.Generated;
  * @see BiToShortFunction
  */
 @FunctionalInterface
-@Generated(value = "Obj$Type$To$Type$Function.java", date = "2024-09-02T09:14:55.674339300Z")
+@Generated(value = "Obj$Type$To$Type$Function.java", date = "2024-09-04T12:43:13.897453300Z")
 public interface ObjShortToShortFunction<T> extends ObjShortFunction<T, Short>, BiToShortFunction<T, Short> {
     /**
      * Applies this function to the given arguments.

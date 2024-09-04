@@ -10,7 +10,7 @@ import java.util.function.Predicate;
  * A simple predicate for the primitive <code>double</code> values.
  */
 @FunctionalInterface
-@Generated(value = "$Type$Predicate.java", date = "2024-09-02T09:14:55.640331900Z")
+@Generated(value = "$Type$Predicate.java", date = "2024-09-04T12:43:13.856443Z")
 public interface DoublePredicate extends
         java.util.function.DoublePredicate,
         Predicate<Double>,

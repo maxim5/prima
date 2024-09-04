@@ -9,7 +9,7 @@ import io.spbx.util.prima.func.LongUnaryOperator;
 /**
  * Utility operations for <code>long</code>s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-09-02T09:14:55.681341200Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-04T12:43:13.906454100Z")
 public class LongOps {
     public static final LongBinaryOperator LONG_ADD = Long::sum;
     public static final LongBinaryOperator LONG_MUL = (a, b) -> a * b;
@@ -123,6 +123,15 @@ public class LongOps {
                | (b6 & 0xFFL) << 16
                | (b7 & 0xFFL) << 8
                | (b8 & 0xFFL);
+    }
+
+    /* Java NIO buffers */
+
+    // https://stackoverflow.com/questions/679298/gets-byte-array-from-a-bytebuffer-in-java
+    private static long[] remainingLongs(java.nio.LongBuffer buffer) {
+        long[] longs = new long[buffer.remaining()];
+        buffer.get(longs, 0, longs.length);
+        return longs;
     }
 
     /* Positive/non-negative number selections */

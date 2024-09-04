@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 /**
  * A simple immutable pair of two <code>byte</code> values.
  */
-@Generated(value = "$Type$sPair.java", date = "2024-09-02T09:14:55.693343900Z")
+@Generated(value = "$Type$sPair.java", date = "2024-09-04T12:43:13.923459200Z")
 public record BytesPair(byte first, byte second) {
     public static @NotNull BytesPair of(byte first, byte second) {
         return new BytesPair(first, second);

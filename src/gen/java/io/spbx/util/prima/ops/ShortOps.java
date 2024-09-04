@@ -9,7 +9,7 @@ import io.spbx.util.prima.func.ShortUnaryOperator;
 /**
  * Utility operations for <code>short</code>s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-09-02T09:14:55.681341200Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-04T12:43:13.906454100Z")
 public class ShortOps {
     public static final ShortBinaryOperator SHORT_ADD = (a, b) -> (short) (a + b);
     public static final ShortBinaryOperator SHORT_MUL = (a, b) -> (short) (a * b);
@@ -118,6 +118,15 @@ public class ShortOps {
 
     public static short valueOfBigEndianBytes(byte b1, byte b2) {
         return (short) ((b1 << 8) | (b2 & 0xFF));
+    }
+
+    /* Java NIO buffers */
+
+    // https://stackoverflow.com/questions/679298/gets-byte-array-from-a-bytebuffer-in-java
+    private static short[] remainingShorts(java.nio.ShortBuffer buffer) {
+        short[] shorts = new short[buffer.remaining()];
+        buffer.get(shorts, 0, shorts.length);
+        return shorts;
     }
 
     /* Positive/non-negative number selections */

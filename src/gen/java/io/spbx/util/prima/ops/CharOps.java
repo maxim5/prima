@@ -9,7 +9,7 @@ import io.spbx.util.prima.func.CharUnaryOperator;
 /**
  * Utility operations for <code>char</code>s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-09-02T09:14:55.681341200Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-04T12:43:13.906454100Z")
 public class CharOps {
 
     public static final CharUnaryOperator CHAR_TO_LOWER = Character::toLowerCase;
@@ -126,5 +126,14 @@ public class CharOps {
 
     public static char valueOfBigEndianBytes(byte b1, byte b2) {
         return (char) ((b1 << 8) | (b2 & 0xFF));
+    }
+
+    /* Java NIO buffers */
+
+    // https://stackoverflow.com/questions/679298/gets-byte-array-from-a-bytebuffer-in-java
+    private static char[] remainingChars(java.nio.CharBuffer buffer) {
+        char[] chars = new char[buffer.remaining()];
+        buffer.get(chars, 0, chars.length);
+        return chars;
     }
 }

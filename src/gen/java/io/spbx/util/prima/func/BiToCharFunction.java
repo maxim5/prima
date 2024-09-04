@@ -7,7 +7,7 @@ import java.util.function.BiFunction;
  * Represents a binary function that produces a primitive <code>char</code>-valued result.
  */
 @FunctionalInterface
-@Generated(value = "BiTo$Type$Function.java", date = "2024-09-02T09:14:55.666336600Z")
+@Generated(value = "BiTo$Type$Function.java", date = "2024-09-04T12:43:13.889450300Z")
 public interface BiToCharFunction<T, U> extends BiFunction<T, U, Character> {
     /**
      * Applies this function to the given arguments.

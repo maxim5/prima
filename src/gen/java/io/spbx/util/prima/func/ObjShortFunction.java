@@ -15,7 +15,7 @@ import java.util.function.BiFunction;
  * @see ShortFunction
  */
 @FunctionalInterface
-@Generated(value = "Obj$Type$Function.java", date = "2024-09-02T09:14:55.670338700Z")
+@Generated(value = "Obj$Type$Function.java", date = "2024-09-04T12:43:13.893451400Z")
 public interface ObjShortFunction<T, R> extends BiFunction<T, Short, R> {
     /**
      * Applies this function to the given arguments.

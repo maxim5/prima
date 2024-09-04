@@ -9,7 +9,7 @@ import io.spbx.util.prima.func.FloatUnaryOperator;
 /**
  * Utility operations for <code>float</code>s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-09-02T09:14:55.681341200Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-04T12:43:13.906454100Z")
 public class FloatOps {
     public static final FloatBinaryOperator FLOAT_ADD = Float::sum;
     public static final FloatBinaryOperator FLOAT_MUL = (a, b) -> a * b;
@@ -79,6 +79,15 @@ public class FloatOps {
         java.nio.ByteBuffer byteBuffer = java.nio.ByteBuffer.allocate(array.length * Float.BYTES);
         byteBuffer.asFloatBuffer().put(array);
         return byteBuffer.array();
+    }
+
+    /* Java NIO buffers */
+
+    // https://stackoverflow.com/questions/679298/gets-byte-array-from-a-bytebuffer-in-java
+    private static float[] remainingFloats(java.nio.FloatBuffer buffer) {
+        float[] floats = new float[buffer.remaining()];
+        buffer.get(floats, 0, floats.length);
+        return floats;
     }
 
     /* Positive/non-negative number selections */

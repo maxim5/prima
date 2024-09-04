@@ -9,7 +9,7 @@ import io.spbx.util.prima.func.IntUnaryOperator;
 /**
  * Utility operations for <code>int</code>s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-09-02T09:14:55.681341200Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-04T12:43:13.906454100Z")
 public class IntOps {
     public static final IntBinaryOperator INT_ADD = Integer::sum;
     public static final IntBinaryOperator INT_MUL = (a, b) -> a * b;
@@ -140,6 +140,15 @@ public class IntOps {
 
     public static int valueOfBigEndianBytes(byte b1, byte b2, byte b3, byte b4) {
         return b1 << 24 | (b2 & 0xFF) << 16 | (b3 & 0xFF) << 8 | (b4 & 0xFF);
+    }
+
+    /* Java NIO buffers */
+
+    // https://stackoverflow.com/questions/679298/gets-byte-array-from-a-bytebuffer-in-java
+    private static int[] remainingInts(java.nio.IntBuffer buffer) {
+        int[] ints = new int[buffer.remaining()];
+        buffer.get(ints, 0, ints.length);
+        return ints;
     }
 
     /* Positive/non-negative number selections */

@@ -8,7 +8,7 @@ import java.util.function.Function;
  * and produces an {@link Object} result.
  */
 @FunctionalInterface
-@Generated(value = "$Type$Function.java", date = "2024-09-02T09:14:55.636331100Z")
+@Generated(value = "$Type$Function.java", date = "2024-09-04T12:43:13.850441800Z")
 public interface ByteFunction<R> extends Function<Byte, R> {
     /**
      * Applies this function to the given argument.

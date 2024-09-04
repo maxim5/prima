@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 /**
  * A simple immutable pair of two <code>float</code> values.
  */
-@Generated(value = "$Type$sPair.java", date = "2024-09-02T09:14:55.693343900Z")
+@Generated(value = "$Type$sPair.java", date = "2024-09-04T12:43:13.923459200Z")
 public record FloatsPair(float first, float second) {
     public static @NotNull FloatsPair of(float first, float second) {
         return new FloatsPair(first, second);

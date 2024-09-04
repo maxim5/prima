@@ -9,7 +9,7 @@ import java.util.function.BiConsumer;
  * to operate via side-effects.
  */
 @FunctionalInterface
-@Generated(value = "Bi$Type$Consumer.java", date = "2024-09-02T09:14:55.654334600Z")
+@Generated(value = "Bi$Type$Consumer.java", date = "2024-09-04T12:43:13.875447400Z")
 public interface BiShortConsumer extends BiConsumer<Short, Short> {
     /**
      * Performs this operation on the {@code short} arguments.

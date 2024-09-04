@@ -9,7 +9,7 @@ import io.spbx.util.prima.func.ByteUnaryOperator;
 /**
  * Utility operations for <code>byte</code>s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-09-02T09:14:55.681341200Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-04T12:43:13.906454100Z")
 public class ByteOps {
     public static final ByteBinaryOperator BYTE_ADD = (a, b) -> (byte) (a + b);
     public static final ByteBinaryOperator BYTE_MUL = (a, b) -> (byte) (a * b);
@@ -102,6 +102,15 @@ public class ByteOps {
             doubles[i] = (double) values[i];
         }
         return doubles;
+    }
+
+    /* Java NIO buffers */
+
+    // https://stackoverflow.com/questions/679298/gets-byte-array-from-a-bytebuffer-in-java
+    private static byte[] remainingBytes(java.nio.ByteBuffer buffer) {
+        byte[] bytes = new byte[buffer.remaining()];
+        buffer.get(bytes, 0, bytes.length);
+        return bytes;
     }
 
     /* Positive/non-negative number selections */
