@@ -91,4 +91,14 @@ public class _NioOps {
 /*= conversions-end =*/
 
 
+/*= niobuf-start =*/
+    // https://stackoverflow.com/questions/679298/gets-byte-array-from-a-bytebuffer-in-java
+    private static $type$[] remaining$Type$s(java.nio.$Type$Buffer buffer) {
+        $type$[] $type$s = new $type$[buffer.remaining()];
+        buffer.get($type$s, 0, $type$s.length);
+        return $type$s;
+    }
+/*= niobuf-end =*/
+
+
 }

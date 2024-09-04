@@ -160,6 +160,10 @@ public class $Type$Ops {
     /*= import "io/spbx/util/prima/ops/_NioOps.java" conversions =*/
 /*= end =*/
 
+    /* Java NIO buffers */
+
+    /*= import "io/spbx/util/prima/ops/_NioOps.java" niobuf =*/
+
 /*= if ($type$ != char) =*/
     /* Positive/non-negative number selections */
 
