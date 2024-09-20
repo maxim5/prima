@@ -4,9 +4,9 @@ import javax.annotation.processing.Generated;
 import java.util.function.BiPredicate;
 
 /**
- * Represents a predicate (boolean-valued function) of two <code>$type$</code>-valued.
+ * Represents a predicate (boolean-valued function) of two {@code $type$}-valued.
  * This is the two-arity specialization of {@link Predicate}.
- * This is the primitive type specialization of {@link BiPredicate} for <code>$type$</code>.
+ * This is the primitive type specialization of {@link BiPredicate} for {@code $type$}.
  */
 @FunctionalInterface
 @Generated(value = "$source_template$", date = "$now$")

@@ -4,12 +4,12 @@ import javax.annotation.processing.Generated;
 import java.util.function.BinaryOperator;
 
 /**
- * Represents an operation upon two <code>char</code>-valued operands and producing a
- * <code>char</code>-valued result.   This is the primitive type specialization of
- * {@link BinaryOperator} for <code>char</code>.
+ * Represents an operation upon two {@code char}-valued operands and producing a
+ * {@code char}-valued result. This is the primitive type specialization of
+ * {@link BinaryOperator} for {@code char}.
  */
 @FunctionalInterface
-@Generated(value = "$Type$BinaryOperator.java", date = "2024-09-04T12:43:13.838438900Z")
+@Generated(value = "$Type$BinaryOperator.java", date = "2024-09-20T09:36:23.439922515Z")
 public interface CharBinaryOperator extends
         BinaryOperator<Character>,
         ObjCharFunction<Character, Character> {

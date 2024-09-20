@@ -4,9 +4,9 @@ import javax.annotation.processing.Generated;
 import java.util.function.BinaryOperator;
 
 /**
- * Represents an operation upon two <code>$type$</code>-valued operands and producing a
- * <code>$type$</code>-valued result.   This is the primitive type specialization of
- * {@link BinaryOperator} for <code>$type$</code>.
+ * Represents an operation upon two {@code $type$}-valued operands and producing a
+ * {@code $type$}-valued result. This is the primitive type specialization of
+ * {@link BinaryOperator} for {@code $type$}.
  */
 @FunctionalInterface
 @Generated(value = "$source_template$", date = "$now$")

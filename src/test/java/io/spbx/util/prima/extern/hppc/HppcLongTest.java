@@ -9,6 +9,7 @@ import com.google.common.truth.IterableSubject;
 import io.spbx.util.testing.MockConsumer;
 import org.jetbrains.annotations.CheckReturnValue;
 import org.jetbrains.annotations.NotNull;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.stream.Stream;
@@ -19,6 +20,7 @@ import static io.spbx.util.testing.TestingBasics.arrayOf;
 import static io.spbx.util.testing.TestingBasics.listOf;
 import static io.spbx.util.testing.TestingPrimitives.longs;
 
+@Tag("fast")
 public class HppcLongTest {
     @Test
     public void list_slice() {

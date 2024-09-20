@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 /**
- * A simple immutable pair of two <code>$type$</code> values.
+ * A simple immutable pair of two {@code $type$} values.
  */
 @Generated(value = "$source_template$", date = "$now$")
 public record $Type$sPair($type$ first, $type$ second) {

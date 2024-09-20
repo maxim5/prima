@@ -4,12 +4,12 @@ import javax.annotation.processing.Generated;
 import java.util.function.BiPredicate;
 
 /**
- * Represents a predicate (boolean-valued function) of two <code>char</code>-valued.
+ * Represents a predicate (boolean-valued function) of two {@code char}-valued.
  * This is the two-arity specialization of {@link Predicate}.
- * This is the primitive type specialization of {@link BiPredicate} for <code>char</code>.
+ * This is the primitive type specialization of {@link BiPredicate} for {@code char}.
  */
 @FunctionalInterface
-@Generated(value = "Bi$Type$Predicate.java", date = "2024-09-04T12:43:13.884449900Z")
+@Generated(value = "Bi$Type$Predicate.java", date = "2024-09-20T09:36:23.503308643Z")
 public interface BiCharPredicate extends BiPredicate<Character, Character>, ObjCharFunction<Character, Boolean>, BiCharFunction<Boolean> {
     /**
      * Evaluates this predicate on the {@code char} arguments.

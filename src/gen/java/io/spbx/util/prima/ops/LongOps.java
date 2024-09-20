@@ -7,9 +7,9 @@ import java.util.function.LongPredicate;
 import io.spbx.util.prima.func.LongUnaryOperator;
 
 /**
- * Utility operations for <code>long</code>s.
+ * Utility operations for {@code long}s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-09-04T12:43:13.906454100Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-20T09:36:23.347893159Z")
 public class LongOps {
     public static final LongBinaryOperator LONG_ADD = Long::sum;
     public static final LongBinaryOperator LONG_MUL = (a, b) -> a * b;

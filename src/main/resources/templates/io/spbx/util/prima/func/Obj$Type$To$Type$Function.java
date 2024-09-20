@@ -3,8 +3,8 @@ package io.spbx.util.prima.func;
 import javax.annotation.processing.Generated;
 
 /**
- * Represents a function that accepts two arguments and produces a <code>$type$</code> result.
- * This is the specialization of {@link BiFunction}, one of the arguments for which is an <code>$type$</code>
+ * Represents a function that accepts two arguments and produces a {@code $type$} result.
+ * This is the specialization of {@link BiFunction}, one of the arguments for which is an {@code $type$}
  * as well as the result.
  *
  * @param <T> the type of one of the arguments to the function

@@ -14,9 +14,9 @@ import java.util.List;
 import java.util.stream.Stream;
 
 /**
- * A simple immutable pair of two <code>long</code> values.
+ * A simple immutable pair of two {@code long} values.
  */
-@Generated(value = "$Type$sPair.java", date = "2024-09-04T12:43:13.923459200Z")
+@Generated(value = "$Type$sPair.java", date = "2024-09-20T09:36:23.137102476Z")
 public record LongsPair(long first, long second) {
     public static @NotNull LongsPair of(long first, long second) {
         return new LongsPair(first, second);

@@ -5,7 +5,7 @@ import java.util.function.BiFunction;
 
 /**
  * Represents a function that accepts two arguments and produces a result.
- * This is the specialization of {@link BiFunction}, one of the arguments for which is an <code>int</code>.
+ * This is the specialization of {@link BiFunction}, one of the arguments for which is an {@code int}.
  *
  * @param <T> the type of one of the arguments to the function
  * @param <R> the type of the result of the function
@@ -15,7 +15,7 @@ import java.util.function.BiFunction;
  * @see IntFunction
  */
 @FunctionalInterface
-@Generated(value = "Obj$Type$Function.java", date = "2024-09-04T12:43:13.893451400Z")
+@Generated(value = "Obj$Type$Function.java", date = "2024-09-20T09:36:23.514506380Z")
 public interface ObjIntFunction<T, R> extends BiFunction<T, Integer, R> {
     /**
      * Applies this function to the given arguments.

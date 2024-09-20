@@ -4,7 +4,7 @@ import javax.annotation.processing.Generated;
 import java.util.function.BiFunction;
 
 /**
- * Represents a function that accepts two primitive <code>$type$</code>-valued arguments
+ * Represents a function that accepts two primitive {@code $type$}-valued arguments
  * and produces an {@link Object} result.
  */
 @FunctionalInterface

@@ -13,7 +13,7 @@ import io.spbx.util.prima.func.$Type$BinaryOperator;
 import io.spbx.util.prima.func.$Type$UnaryOperator;
 
 /**
- * Utility operations for <code>$type$</code>s.
+ * Utility operations for {@code $type$}s.
  */
 @Generated(value = "$source_template$", date = "$now$")
 public class $Type$Ops {
