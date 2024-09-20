@@ -1,11 +1,13 @@
 package io.spbx.util.prima.extern.hppc;
 
 import com.carrotsearch.hppc.ByteArrayList;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.spbx.util.prima.testing.AssertHppc.assertArray;
 import static io.spbx.util.testing.TestingPrimitives.bytes;
 
+@Tag("fast")
 public class HppcByteTest {
     @Test
     public void to_array_list() {

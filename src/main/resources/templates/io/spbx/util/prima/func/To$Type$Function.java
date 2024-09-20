@@ -4,7 +4,7 @@ import javax.annotation.processing.Generated;
 import java.util.function.Function;
 
 /**
- * Represents a function that produces a primitive <code>$type$</code>-valued result.
+ * Represents a function that produces a primitive {@code $type$}-valued result.
  */
 @FunctionalInterface
 @Generated(value = "$source_template$", date = "$now$")

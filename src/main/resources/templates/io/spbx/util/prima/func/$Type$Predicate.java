@@ -9,7 +9,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 /**
- * A simple predicate for the primitive <code>$type$</code> values.
+ * A simple predicate for the primitive {@code $type$} values.
  */
 @FunctionalInterface
 @Generated(value = "$source_template$", date = "$now$")

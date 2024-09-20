@@ -1,9 +1,11 @@
 package io.spbx.util.prima.ops;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.google.common.truth.Truth.assertThat;
 
+@Tag("fast")
 public class CharOpsTest {
     @Test
     public void to_ascii_lower_case() {

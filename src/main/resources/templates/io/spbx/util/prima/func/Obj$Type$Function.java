@@ -5,7 +5,7 @@ import java.util.function.BiFunction;
 
 /**
  * Represents a function that accepts two arguments and produces a result.
- * This is the specialization of {@link BiFunction}, one of the arguments for which is an <code>$type$</code>.
+ * This is the specialization of {@link BiFunction}, one of the arguments for which is an {@code $type$}.
  *
  * @param <T> the type of one of the arguments to the function
  * @param <R> the type of the result of the function

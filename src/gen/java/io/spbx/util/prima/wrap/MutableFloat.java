@@ -5,9 +5,9 @@ import org.jetbrains.annotations.Nullable;
 import javax.annotation.processing.Generated;
 
 /**
- * A simple mutable wrapper around <code>float</code>.
+ * A simple mutable wrapper around {@code float}.
  */
-@Generated(value = "Mutable$Type$.java", date = "2024-09-04T12:43:13.928459100Z")
+@Generated(value = "Mutable$Type$.java", date = "2024-09-20T09:36:23.276111282Z")
 public class MutableFloat {
     public float value = 0;
 

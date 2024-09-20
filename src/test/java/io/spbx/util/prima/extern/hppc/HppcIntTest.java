@@ -11,6 +11,7 @@ import com.google.common.truth.IterableSubject;
 import io.spbx.util.testing.MockConsumer;
 import org.jetbrains.annotations.CheckReturnValue;
 import org.jetbrains.annotations.NotNull;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.stream.Stream;
@@ -24,6 +25,7 @@ import static io.spbx.util.prima.testing.TestingHppc.newIntObjectMap;
 import static io.spbx.util.testing.TestingPrimitives.ints;
 import static org.junit.jupiter.api.Assertions.fail;
 
+@Tag("fast")
 public class HppcIntTest {
     @Test
     public void list_slice() {

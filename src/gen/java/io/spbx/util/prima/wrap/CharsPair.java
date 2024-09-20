@@ -14,9 +14,9 @@ import java.util.List;
 import java.util.stream.Stream;
 
 /**
- * A simple immutable pair of two <code>char</code> values.
+ * A simple immutable pair of two {@code char} values.
  */
-@Generated(value = "$Type$sPair.java", date = "2024-09-04T12:43:13.923459200Z")
+@Generated(value = "$Type$sPair.java", date = "2024-09-20T09:36:23.137102476Z")
 public record CharsPair(char first, char second) {
     public static @NotNull CharsPair of(char first, char second) {
         return new CharsPair(first, second);

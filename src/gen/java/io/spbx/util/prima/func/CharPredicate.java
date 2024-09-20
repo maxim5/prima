@@ -5,10 +5,10 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 /**
- * A simple predicate for the primitive <code>char</code> values.
+ * A simple predicate for the primitive {@code char} values.
  */
 @FunctionalInterface
-@Generated(value = "$Type$Predicate.java", date = "2024-09-04T12:43:13.856443Z")
+@Generated(value = "$Type$Predicate.java", date = "2024-09-20T09:36:23.468034345Z")
 public interface CharPredicate extends
         Predicate<Character>,
         Function<Character, Boolean> {

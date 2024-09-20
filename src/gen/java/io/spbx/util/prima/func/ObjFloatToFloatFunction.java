@@ -3,8 +3,8 @@ package io.spbx.util.prima.func;
 import javax.annotation.processing.Generated;
 
 /**
- * Represents a function that accepts two arguments and produces a <code>float</code> result.
- * This is the specialization of {@link BiFunction}, one of the arguments for which is an <code>float</code>
+ * Represents a function that accepts two arguments and produces a {@code float} result.
+ * This is the specialization of {@link BiFunction}, one of the arguments for which is an {@code float}
  * as well as the result.
  *
  * @param <T> the type of one of the arguments to the function
@@ -16,7 +16,7 @@ import javax.annotation.processing.Generated;
  * @see BiToFloatFunction
  */
 @FunctionalInterface
-@Generated(value = "Obj$Type$To$Type$Function.java", date = "2024-09-04T12:43:13.897453300Z")
+@Generated(value = "Obj$Type$To$Type$Function.java", date = "2024-09-20T09:36:23.521658274Z")
 public interface ObjFloatToFloatFunction<T> extends ObjFloatFunction<T, Float>, BiToFloatFunction<T, Float> {
     /**
      * Applies this function to the given arguments.

@@ -7,9 +7,9 @@ import java.util.function.DoublePredicate;
 import io.spbx.util.prima.func.DoubleUnaryOperator;
 
 /**
- * Utility operations for <code>double</code>s.
+ * Utility operations for {@code double}s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-09-04T12:43:13.906454100Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-20T09:36:23.347893159Z")
 public class DoubleOps {
     public static final DoubleBinaryOperator DOUBLE_ADD = Double::sum;
     public static final DoubleBinaryOperator DOUBLE_MUL = (a, b) -> a * b;

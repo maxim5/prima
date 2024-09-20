@@ -4,8 +4,8 @@ import javax.annotation.processing.Generated;
 import java.util.function.UnaryOperator;
 
 /**
- * Represents an operation on a single <code>$type$</code>-valued operand that produces
- * an <code>$type$</code>-valued result.
+ * Represents an operation on a single {@code $type$}-valued operand that produces
+ * an {@code $type$}-valued result.
  */
 @FunctionalInterface
 @Generated(value = "$source_template$", date = "$now$")

@@ -4,12 +4,12 @@ import javax.annotation.processing.Generated;
 import java.util.function.BinaryOperator;
 
 /**
- * Represents an operation upon two <code>short</code>-valued operands and producing a
- * <code>short</code>-valued result.   This is the primitive type specialization of
- * {@link BinaryOperator} for <code>short</code>.
+ * Represents an operation upon two {@code short}-valued operands and producing a
+ * {@code short}-valued result. This is the primitive type specialization of
+ * {@link BinaryOperator} for {@code short}.
  */
 @FunctionalInterface
-@Generated(value = "$Type$BinaryOperator.java", date = "2024-09-04T12:43:13.838438900Z")
+@Generated(value = "$Type$BinaryOperator.java", date = "2024-09-20T09:36:23.439922515Z")
 public interface ShortBinaryOperator extends
         BinaryOperator<Short>,
         ObjShortFunction<Short, Short> {

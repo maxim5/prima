@@ -7,9 +7,9 @@ import io.spbx.util.prima.func.ShortBinaryOperator;
 import io.spbx.util.prima.func.ShortUnaryOperator;
 
 /**
- * Utility operations for <code>short</code>s.
+ * Utility operations for {@code short}s.
  */
-@Generated(value = "$Type$Ops.java", date = "2024-09-04T12:43:13.906454100Z")
+@Generated(value = "$Type$Ops.java", date = "2024-09-20T09:36:23.347893159Z")
 public class ShortOps {
     public static final ShortBinaryOperator SHORT_ADD = (a, b) -> (short) (a + b);
     public static final ShortBinaryOperator SHORT_MUL = (a, b) -> (short) (a * b);

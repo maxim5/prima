@@ -5,7 +5,7 @@ import org.jetbrains.annotations.Nullable;
 import javax.annotation.processing.Generated;
 
 /**
- * A simple mutable wrapper around <code>$type$</code>.
+ * A simple mutable wrapper around {@code $type$}.
  */
 @Generated(value = "$source_template$", date = "$now$")
 public class Mutable$Type$ {

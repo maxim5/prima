@@ -1,10 +1,12 @@
 package io.spbx.util.prima.ops;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+@Tag("fast")
 public class IntOpsTest {
     @Test
     public void range_of_one() {

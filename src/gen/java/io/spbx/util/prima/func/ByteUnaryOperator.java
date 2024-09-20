@@ -4,11 +4,11 @@ import javax.annotation.processing.Generated;
 import java.util.function.UnaryOperator;
 
 /**
- * Represents an operation on a single <code>byte</code>-valued operand that produces
- * an <code>byte</code>-valued result.
+ * Represents an operation on a single {@code byte}-valued operand that produces
+ * an {@code byte}-valued result.
  */
 @FunctionalInterface
-@Generated(value = "$Type$UnaryOperator.java", date = "2024-09-04T12:43:13.869447200Z")
+@Generated(value = "$Type$UnaryOperator.java", date = "2024-09-20T09:36:23.480207044Z")
 public interface ByteUnaryOperator extends
         UnaryOperator<Byte>, ByteFunction<Byte>, ToByteFunction<Byte> {
     /**

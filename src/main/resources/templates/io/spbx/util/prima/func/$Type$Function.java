@@ -4,7 +4,7 @@ import javax.annotation.processing.Generated;
 import java.util.function.Function;
 
 /**
- * Represents a function that accepts a primitive <code>$type$</code>-valued argument
+ * Represents a function that accepts a primitive {@code $type$}-valued argument
  * and produces an {@link Object} result.
  */
 @FunctionalInterface

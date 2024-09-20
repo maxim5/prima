@@ -30,7 +30,7 @@ import java.util.stream.StreamSupport;
  *
  * @link <a href='https://github.com/carrotsearch/hppc'>Hppc GitHub</a>
  */
-@Generated(value = "Hppc$Type$.java", date = "2024-09-04T12:43:13.829437700Z")
+@Generated(value = "Hppc$Type$.java", date = "2024-09-20T09:36:23.324475945Z")
 public class HppcLong {
     /*
      * In case Hppc library is not in a classpath, try to fail early and produce a friendly error message.

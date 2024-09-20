@@ -4,11 +4,11 @@ import javax.annotation.processing.Generated;
 import java.util.function.UnaryOperator;
 
 /**
- * Represents an operation on a single <code>long</code>-valued operand that produces
- * an <code>long</code>-valued result.
+ * Represents an operation on a single {@code long}-valued operand that produces
+ * an {@code long}-valued result.
  */
 @FunctionalInterface
-@Generated(value = "$Type$UnaryOperator.java", date = "2024-09-04T12:43:13.869447200Z")
+@Generated(value = "$Type$UnaryOperator.java", date = "2024-09-20T09:36:23.480207044Z")
 public interface LongUnaryOperator extends
         java.util.function.LongUnaryOperator,
         UnaryOperator<Long>, LongFunction<Long>, ToLongFunction<Long> {
